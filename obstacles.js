@@ -24,13 +24,13 @@ class Obstacles {
 }
 
 function handleObstacles() {
-  if (frame % 150 === 0) {
+  if (frame % 120 === 0) {
     obstaclesArray.unshift(new Obstacles());
   }
   for (let i = 0; i < obstaclesArray.length; i++) {
     obstaclesArray[i].update();
   }
-  if (obstaclesArray.length > 20) {
+   if (obstaclesArray.length > 20) {
     obstaclesArray.pop(obstaclesArray[0]);
   }
 }

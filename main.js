@@ -9,6 +9,8 @@ let hue = 0;
 let frame = 0;
 let score = 0;
 let gamespeed = 2;
+let sound_background = new Audio("./flappy.mp3");
+
 
 const gradient = ctx.createLinearGradient(0, 0, 0, 70);
 gradient.addColorStop("0.4", "#fff");
@@ -37,6 +39,7 @@ function handleBackground() {
 
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+  sound_background.play();
   handleBackground();
   handleObstacles();
   handleParticles();
